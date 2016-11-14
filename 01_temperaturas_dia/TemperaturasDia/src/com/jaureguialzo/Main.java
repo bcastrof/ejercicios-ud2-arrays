@@ -10,11 +10,13 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        final int HORAS = 24; // Constante
+
         // Declarar el array
-        double[] temperaturas = new double[5];
+        double[] temperaturas = new double[HORAS];
 
         // Leer los valores en el array
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < HORAS; i++) {
             System.out.print("Escribe la temperatura: ");
             temperaturas[i] = Double.parseDouble(br.readLine());
         }
@@ -24,7 +26,7 @@ public class Main {
         double max = Double.MIN_VALUE;
         double min = Double.MAX_VALUE;
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < HORAS; i++) {
             total += temperaturas[i];
 
             if (temperaturas[i] > max) {
@@ -36,10 +38,10 @@ public class Main {
             }
         }
 
-        double media = total / 5;
+        double media = total / HORAS;
 
         // Hacer el dibujo
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < HORAS; i++) {
             // Hora
             System.out.print(i);
 
